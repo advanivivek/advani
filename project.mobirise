@@ -3135,7 +3135,7 @@
                 "title": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": true
+                "active": false
               },
               {
                 "tags": "Space",
@@ -3480,13 +3480,13 @@
                 "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2019916-1545292019-9-3-15-58-33.jpg",
                 "playVideo": true,
                 "videoUrl": "https://youtu.be/9HAYOvD8YpY",
-                "image": "@PROJECT_PATH@/assets/images/screenshot-2019-10-07-at-2.57.44-am-2000x1250.png",
-                "thumb": "@PROJECT_PATH@/assets/images/screenshot-2019-10-07-at-2.57.44-am-2000x1250-800x500.png",
+                "image": "@PROJECT_PATH@/assets/images/yintheyang-cover-1872x586.png",
+                "thumb": "@PROJECT_PATH@/assets/images/yintheyang-cover-1872x586-800x250.png",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": true
               },
               {
                 "tags": "Video",
