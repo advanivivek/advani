@@ -69,16 +69,19 @@
         "url": "https://fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,700,700i"
       }
     ],
-    "uniqCompNum": 110,
+    "uniqCompNum": 111,
     "versionPublish": "4.11.6",
     "screenshot": "screenshot.png",
-    "favicon": "",
+    "favicon": false,
     "": "on",
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": false,
     "siteUrl": "undefined",
-    "pwa-switcher": false
+    "pwa-switcher": false,
+    "noImageResize": false,
+    "cookiesAlert": false,
+    "gdpr": false
   },
   "pages": {
     "index.html": {
@@ -3273,11 +3276,84 @@
               "text-align": "center"
             }
           },
-          "_customHTML": "<section class=\"extHeader\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Media on right/left\" name=\"mediaPos\" checked>\n        <input type=\"color\" title=\"Card Color\" name=\"cardBgColor\" value=\"#ffffff\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1-2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#161616\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=pjiVuLVqWQg\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type == 'color'\">\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#1ec5bf\" condition=\"gradientBg&& bg.type=='color'\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#d7e8f6\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradientOverlay\" condition=\"bg.type !== 'color' && overlay\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" condition=\"overlay && bg.type !== 'color' && gradientOverlay\" value=\"#f0fdff\">\n        \n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row align-items-center justify-content-center content-row\">\n            \n            <div class=\"col-lg-7 col-md-12\">\n                <div mbr-video class=\"mbr-figure\">\n                    <iframe src=\"https://www.youtube.com/watch?v=9HAYOvD8YpY&loop=0&autoplay=0\"></iframe>\n                </div>\n            </div>\n            \n            <div class=\"content-block col-md-12 col-lg-5\" mbr-if=\"showTitle||showText||showSubtitle||showButtons\">\n                <div class=\"text-content\">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12 \">\n                            <h2 class=\"mb-4 mbr-fonts-style mbr-section-title mbr-black\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-btn, .mbr-section-title\"><b>A'dam Bachata Festival</b></h2>\n                            <h3 class=\"mbr-section-subtitle mbr-fonts-style mb-4 mbr-black\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Music video shot for a talented guitarist Ladislav Pazdera.</h3>\n                            <p class=\"mb-4 mbr-fonts-style mbr-black\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">Made this short promo for an <a href=\"http://bailemos.net\" target=\"_blank\" class=\"text-success\">international dance school</a> in Amsterdam to excite the latin dance community in major EU countries.</p>\n                            <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                                <a class=\"btn btn-md btn-black btn-bgr\" href=\"https://mobirise.com\">See More</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            \n            \n            \n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"extHeader\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Media on right/left\" name=\"mediaPos\">\n        <input type=\"color\" title=\"Card Color\" name=\"cardBgColor\" value=\"#ffffff\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1-2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#161616\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=pjiVuLVqWQg\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type == 'color'\">\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#1ec5bf\" condition=\"gradientBg&& bg.type=='color'\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#d7e8f6\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradientOverlay\" condition=\"bg.type !== 'color' && overlay\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" condition=\"overlay && bg.type !== 'color' && gradientOverlay\" value=\"#f0fdff\">\n        \n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row align-items-center justify-content-center content-row\">\n            \n            <div class=\"col-lg-7 col-md-12\">\n                <div mbr-video class=\"mbr-figure\">\n                    <iframe src=\"https://www.youtube.com/watch?v=9HAYOvD8YpY&loop=0&autoplay=0\"></iframe>\n                </div>\n            </div>\n            \n            <div class=\"content-block col-md-12 col-lg-5\" mbr-if=\"showTitle||showText||showSubtitle||showButtons\">\n                <div class=\"text-content\">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12 \">\n                            <h2 class=\"mb-4 mbr-fonts-style mbr-section-title mbr-black\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-btn, .mbr-section-title\"><b>A'dam Bachata Festival</b></h2>\n                            <h3 class=\"mbr-section-subtitle mbr-fonts-style mb-4 mbr-black\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Music video shot for a talented guitarist Ladislav Pazdera.</h3>\n                            <p class=\"mb-4 mbr-fonts-style mbr-black\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">Made this short promo for an <a href=\"http://bailemos.net\" target=\"_blank\" class=\"text-success\">international dance school</a> in Amsterdam to excite the latin dance community in major EU countries.</p>\n                            <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                                <a class=\"btn btn-md btn-black btn-bgr\" href=\"https://mobirise.com\">See More</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            \n            \n            \n        </div>\n    </div>\n</section>",
           "_anchor": "extHeader15-31",
           "_isUserblock": true,
           "_sourceTheme": "photom4",
           "_cid": "rQqjQzHL6W",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_name": "extHeader15",
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value",
+              "& when (@gradientBg)": {
+                "background": "linear-gradient(90deg, @bg-value, @color2)"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".text-content .btn-bgr": {
+              "z-index": "0"
+            },
+            ".mbr-overlay": {
+              "background": "@overlayColor",
+              "& when (@gradientOverlay)": {
+                "background": "linear-gradient(135deg, @overlayColor, @overlayColor2)"
+              }
+            },
+            ".content-row": {
+              "& when (@mediaPos)": {
+                "-webkit-flex-direction": "row-reverse",
+                "flex-direction": "row-reverse"
+              }
+            },
+            ".text-content": {
+              "padding": "2rem 0rem",
+              "background-color": "transparent"
+            },
+            ".mbr-section-btn": {
+              "margin-left": "-0.8rem"
+            },
+            ".media-container-row": {
+              "padding-left": "1rem",
+              "padding-right": "1rem"
+            },
+            ".mbr-text": {
+              "@media (max-width: 767px)": {
+                "text-align": "center"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".text-content": {
+                "margin-bottom": "2rem"
+              }
+            },
+            ".mbr-section-btn, .mbr-section-title": {
+              "text-align": "center",
+              "color": "#ffffff"
+            },
+            "P": {
+              "text-align": "center",
+              "color": "#ffffff"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#ffffff",
+              "text-align": "center"
+            }
+          },
+          "_customHTML": "<section class=\"extHeader\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Media on right/left\" name=\"mediaPos\" checked>\n        <input type=\"color\" title=\"Card Color\" name=\"cardBgColor\" value=\"#ffffff\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1-2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#161616\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=pjiVuLVqWQg\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type == 'color'\">\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#1ec5bf\" condition=\"gradientBg&& bg.type=='color'\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#d7e8f6\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradientOverlay\" condition=\"bg.type !== 'color' && overlay\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" condition=\"overlay && bg.type !== 'color' && gradientOverlay\" value=\"#f0fdff\">\n        \n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row align-items-center justify-content-center content-row\">\n            \n            <div class=\"col-lg-7 col-md-12\">\n                <div mbr-video class=\"mbr-figure\">\n                    <iframe src=\"https://youtu.be/H4zp_njxovU?loop=0&autoplay=0\"></iframe>\n                </div>\n            </div>\n            \n            <div class=\"content-block col-md-12 col-lg-5\" mbr-if=\"showTitle||showText||showSubtitle||showButtons\">\n                <div class=\"text-content\">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12 \">\n                            <h2 class=\"mb-4 mbr-fonts-style mbr-section-title mbr-black\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-btn, .mbr-section-title\"><b>Imaginaria</b></h2>\n                            <h3 class=\"mbr-section-subtitle mbr-fonts-style mb-4 mbr-black\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Music video shot for a talented guitarist Ladislav Pazdera.</h3>\n                            <p class=\"mb-4 mbr-fonts-style mbr-black\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">Recently finished a music video for this Brazilian duo called <a href=\"http://guanduobrazil.com\" target=\"_blank\" class=\"text-success\">Guanduo</a>. The composition is based on Capoeira a brazilian martial art that mixes dance and fighting.</p>\n                            <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                                <a class=\"btn btn-md btn-black btn-bgr\" href=\"https://mobirise.com\">See More</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            \n            \n            \n        </div>\n    </div>\n</section>",
+          "_anchor": "extHeader15-32",
+          "_isUserblock": true,
+          "_sourceTheme": "photom4",
+          "_cid": "rVShca3pRu",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
